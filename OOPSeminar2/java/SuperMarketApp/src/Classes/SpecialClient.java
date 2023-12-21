@@ -1,6 +1,8 @@
 package Classes;
 
-public class SpecialClient extends Actor {
+import Interfaces.iReturnOrder;
+
+public class SpecialClient extends Actor implements iReturnOrder{
 
     private int idVIP;
 
@@ -36,5 +38,11 @@ public class SpecialClient extends Actor {
     @Override
     public void setName(String name) {
         super.name = name;
+    }
+
+
+    @Override
+    public void returnOrder(Actor actor) {
+        System.out.println("Возврат");
     }
 }

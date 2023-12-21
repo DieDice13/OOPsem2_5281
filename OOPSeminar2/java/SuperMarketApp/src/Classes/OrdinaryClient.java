@@ -1,6 +1,8 @@
 package Classes;
 
-public class OrdinaryClient extends Actor {
+import Interfaces.iReturnOrder;
+
+public class OrdinaryClient extends Actor implements iReturnOrder{
 
     public OrdinaryClient(String name) {
         super(name);
@@ -32,5 +34,10 @@ public class OrdinaryClient extends Actor {
     @Override
     public void setName(String name) {
         super.name = name;
+    }
+
+    @Override
+    public void returnOrder(Actor actor) {
+        System.out.println("Возврат");
     }
 }
